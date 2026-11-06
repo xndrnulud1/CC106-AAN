@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'registration/style.css' %}">
+    <title>Registration Successful</title>
+</head>
+<body>
+
+    <h1>Registration Successful!</h1>
+
+    <p>The student has been successfully registered.</p>
+
+    <a href="{% url 'student_registration' %}">
+        Register Another Student
+    </a>
+
+</body>
+</html>

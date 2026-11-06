@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'registration/style.css' %}">
+    <title>Student Management System</title>
+</head>
+<body>
+    <h1>Welcome to Student Management System</h1>
+    <p>This is the Landing Page </p>
+
+    <nav>
+        <a href="{% url 'student_list' %}">Student Directory</a>
+        <a href="{% url 'student_registration' %}">Registration</a>
+        <a href="{% url 'home' %}">Go to Home Page</a>
+    </nav>
+</body>
+</html>
