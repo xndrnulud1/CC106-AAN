@@ -1,5 +1,8 @@
 from django.contrib import messages
+<<<<<<< HEAD
 from django.contrib.auth.decorators import user_passes_test
+=======
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect, render
 
@@ -38,6 +41,7 @@ def registration_success(request):
         'registration/success.html'
     )
 
+<<<<<<< HEAD
 
 def staff_check(user):
     return user.is_authenticated and user.is_staff
@@ -84,21 +88,32 @@ def staff_dashboard(request):
 
 
 @user_passes_test(staff_check, login_url='login')
+=======
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
 def student_list(request):
     query = request.GET.get('q', '').strip()
     students = Student.objects.all().order_by('last_name', 'first_name')
     if query:
+<<<<<<< HEAD
         students = students.filter(
             Q(student_id__icontains=query)
             | Q(first_name__icontains=query)
             | Q(last_name__icontains=query)
         )
+=======
+       students = students.filter(
+           Q(student_id__icontains=query) |
+           Q(first_name__icontains=query) |
+           Q(last_name__icontains=query)
+      )
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
     return render(
         request,
         'registration/student_list.html',
         {'students': students, 'query': query},
     )
 
+<<<<<<< HEAD
 
 @user_passes_test(staff_check, login_url='login')
 def student_detail(request, pk):
@@ -111,23 +126,41 @@ def student_detail(request, pk):
 
 
 @user_passes_test(staff_check, login_url='login')
+=======
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
 def student_create(request):
     if request.method == 'POST':
         form = StudentForm(request.POST)
         if form.is_valid():
+<<<<<<< HEAD
             form.save()
             messages.success(request, 'Student record created successfully.')
             return redirect('student_list')
     else:
         form = StudentForm()
+=======
+            student = form.save()
+            messages.success(request, 'Student record created successfully.')
+            return redirect('student_detail', pk=student.pk)
+    else:
+        form = StudentForm()
+
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
     return render(
         request,
         'registration/student_form.html',
         {'form': form, 'page_title': 'Register Student'},
     )
 
+<<<<<<< HEAD
 
 @user_passes_test(staff_check, login_url='login')
+=======
+def student_detail(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    return render(request, 'registration/student_detail.html', {'student': student})
+
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
 def student_update(request, pk):
     student = get_object_or_404(Student, pk=pk)
     if request.method == 'POST':
@@ -138,6 +171,10 @@ def student_update(request, pk):
             return redirect('student_detail', pk=student.pk)
     else:
         form = StudentForm(instance=student)
+<<<<<<< HEAD
+=======
+
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
     return render(
         request,
         'registration/student_form.html',
@@ -148,14 +185,21 @@ def student_update(request, pk):
         },
     )
 
+<<<<<<< HEAD
 
 @user_passes_test(staff_check, login_url='login')
+=======
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
 def student_delete(request, pk):
     student = get_object_or_404(Student, pk=pk)
     if request.method == 'POST':
         student.delete()
         messages.success(request, 'Student record deleted successfully.')
         return redirect('student_list')
+<<<<<<< HEAD
+=======
+
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
     return render(
         request,
         'registration/student_confirm_delete.html',

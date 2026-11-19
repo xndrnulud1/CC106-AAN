@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
     font-family: Arial, sans-serif;
     background: #f4f6f9;
     color: #263445;
@@ -226,4 +227,52 @@ input, select {
     .report-section {
         padding: 14px;
     }
+=======
+font-family: Arial, sans-serif;
+background: #f4f6f9;
+color: #263445;
+margin: 30px;
+}
+h1 {
+color: #0b2d5c;
+}
+a {
+color: #1f5d91;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+nav {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+gap: 10px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+background: #ffffff;
+}
+th {
+background: #0b2d5c;
+color: #ffffff;
+text-align: left;
+}
+th, td {
+padding: 10px;
+border: 1px solid #d7dee8;
+}
+button {
+background: #1f5d91;
+color: #ffffff;
+border: 0;
+padding: 9px 14px;
+cursor: pointer;
+}
+input, select {
+padding: 8px;
+margin: 4px 0;
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
 }

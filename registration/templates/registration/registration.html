@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
+=======
+    <link rel="stylesheet" href="{% static 'registration/style.css' %}">
+>>>>>>> aae1622c46b2c75ac14801e20ae8ec9a373c9856
     <title>Student Registration</title>
     <link rel="stylesheet" href="{% static 'registration/style.css' %}">
 </head>
@@ -50,6 +54,12 @@
 
         <button type="submit">Register Student</button>
     </form>
+
+    <p>
+       <a href="{% url 'student_list' %}">
+            View Student Directory
+       </a>
+</p>
 
 </body>
 </html>
