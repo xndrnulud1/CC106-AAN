@@ -1,0 +1,14 @@
+* [33mc0c0e12[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Module 8 and 9 done
+* [33m597d8f1[m[33m ([m[1;31morigin/main[m[33m)[m Delete db.sqlite3
+* [33m2770d42[m Delete templates directory
+* [33m8703dc8[m Delete student_management directory
+* [33m4ce9580[m Delete registration directory
+* [33mbc372b1[m Delete home directory
+*   [33m2809239[m Week 8 and 9
+[32m|[m[33m\[m  
+[32m|[m *   [33maae1622[m Merge origin/main into master
+[32m|[m [34m|[m[35m\[m  
+[32m|[m * [35m|[m [33m708d0db[m Enhance Django Student Registration with ModelForm and Student Directory
+[32m|[m  [35m/[m  
+* [35m/[m [33mb2e4e7d[m Module 8 / Module 9
+[35m|[m[35m/[m  
